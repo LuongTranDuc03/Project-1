@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link favicon nhà hàng-->
+    <link rel="icon" type="image/png" sizes="32x32" href="noodle.png">
+    <title>Bon Appetit</title>
+    <link rel="stylesheet" href="style1.css"> <!-- file style.css -->
+    
+    <!-- Link font chữ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"> 
+    
+    <!-- Link font chữ tên nhà hàng-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script&display=swap"> 
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="noodle.png" alt="Logo nhà hàng" />
+            <span>Bon Appetit</span>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li class="menu">
+                    <a href="#menu">Thực đơn</a>
+                    <!-- Menu thả xuống -->
+                    <div class="menu-dropdown">
+                        <a id="link-com" href="#com">Cơm</a>
+                        <a id="link-my-udon" href="#my-udon">Mỳ Udon</a>
+                        <a id="link-takoyaki" href="#takoyaki">Takoyaki</a>
+                        <a id="link-okonomiyaki" href="#okonomiyaki">Okonomiyaki</a>
+                        <a id="link-doankem" href="#do-an-kem">Đồ ăn kèm</a>
+                        <a id="link-drink" href="#do-uong">Đồ uống</a>
+                    </div>
+                </li>
+                <li><a href="#promo">Khuyến mãi</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#stores">Chuỗi cửa hàng</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-options">
+            <div class="language">
+                <span class="flag-option default">
+                    <img src="./national-images/vietnam-flag.png" alt="VN" />
+                    VN  
+                </span>
+                <div class="language-dropdown">
+                    <span class="flag-option">
+                        <img src="./national-images/english-flag.png" alt="EN" />
+                        EN
+                    </span>
+                    <span class="flag-option">
+                        <img src="./national-images/japan-flag.png" alt="JN" />
+                        JP
+                    </span>
+                </div>
+            </div>
+
+            <div class="login-register" onclick="openModal()">
+                <div class="avatar">
+                    <img src="./login-images/default-logo.png" alt="Avatar">
+                </div>
+                <div class="text">Đăng Ký/Đăng Nhập</div>
+            </div>
+
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                     <div class="close-modal" onclick="closeModal()">
+                        <button>x</button>
+                    </div>
+
+                    <div class="modal-left">
+                        <img src="./login-images/banner-modal.png" alt="Banner Modal">
+                    </div>
+
+                    <div class="modal-right">
+                        <h2>
+                            Đăng Nhập
+                        </h2>
+
+                        <div class="input-group">
+                            
+                            <input type="text" placeholder=" " id="username">
+                            <label for="username">Tài khoản</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder=" " id="password">
+                            <label for="password">Mật khẩu</label>
+                        </div>
+
+                        <div class="forgot-password">
+                            <a href="#">Bạn quên mật khẩu?</a>
+                        </div>
+
+                        <div class="login-button">
+                            <button>Đăng nhập</button>
+                        </div>
+
+                        <div class="login-options">
+                            <button class="google-login">
+                                <img src="./login-images/google-logo.png" alt="google-logo">
+                                Đăng nhập bằng Google
+                            </button>
+                            <button class="facebook-login">
+                                <img src="./login-images/fb-logo.png" alt="facebook-logo">
+                                Đăng nhập bằng Facebook
+                            </button>
+                        </div>
+
+                        <div class="register-text">
+                            <p>Bạn chưa có tài khoản? <a href="#">Đăng Ký</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </header>
+
+    <div class="background-overlay"></div>
+
+    <main id="home">
+        <div class="main-banner">
+            <img src="Main Banner.png" alt="Main Banner">
+        </div>
+
+        <div class="product-container">
+            <div class="main-product">
+                <h2 id="com">Cơm</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Cơm Torikatsu cà ri">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Takoyaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Takoyaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Takoyaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Takoyaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Takoyaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Cơm Torikatsu cà ri.webp" alt="Takoyaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cơm Torikatsu cà ri</h3>
+                        <p>Bao gồm: Cơm, ức gà chiên xù, cà ri, cà rốt, khoai, sốt torikatsu</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">100.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="main-product">
+                <h2 id="my-udon">Mỳ Udon</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/TantanRamen.png" alt="Mỳ Tantan Ramen">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tantan Ramen</h3>
+                        <p>Bao gồm: Thịt lợn, trứng lòng đào, hành lá, mè rang, mỳ ramen, nước hầm xương</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">90.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="main-product">
+                <h2 id="takoyaki">Takoyaki</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki truyền thống.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki Truyền thống</h3>
+                        <p>Bao gồm: Bột Takoyaki truyền thống, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki truyền thống.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki Truyền thống</h3>
+                        <p>Bao gồm: Bột Takoyaki truyền thống, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki truyền thống.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki Truyền thống</h3>
+                        <p>Bao gồm: Bột Takoyaki truyền thống, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki truyền thống.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki Truyền thống</h3>
+                        <p>Bao gồm: Bột Takoyaki truyền thống, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki truyền thống.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki Truyền thống</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki truyền thống.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki Truyền thống</h3>
+                        <p>Bao gồm: Bột Takoyaki truyền thống, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="main-product">
+                <h2 id="okonomiyaki">Okonomiyaki</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Okonomiyaki Thịt Heo.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Okonomiyaki Thịt Heo</h3>
+                        <p>Bao gồm: Bột Okonomiyaki, trứng gà, bắp cải, hành lá, thịt heo, rau củ thêm</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">80.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Okonomiyaki Thịt Heo.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Okonomiyaki Thịt Heo</h3>
+                        <p>Bao gồm: Bột Okonomiyaki, trứng gà, bắp cải, hành lá, thịt heo, rau củ thêm</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">80.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Okonomiyaki Thịt Heo.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Okonomiyaki Thịt Heo</h3>
+                        <p>Bao gồm: Bột Okonomiyaki, trứng gà, bắp cải, hành lá, thịt heo, rau củ thêm</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">80.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Okonomiyaki Thịt Heo.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Okonomiyaki Thịt Heo</h3>
+                        <p>Bao gồm: Bột Okonomiyaki, trứng gà, bắp cải, hành lá, thịt heo, rau củ thêm</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">80.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Okonomiyaki Thịt Heo.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Okonomiyaki Thịt Heo</h3>
+                        <p>Bao gồm: Bột Okonomiyaki, trứng gà, bắp cải, hành lá, thịt heo, rau củ thêm</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">80.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Okonomiyaki Thịt Heo.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Okonomiyaki Thịt Heo</h3>
+                        <p>Bao gồm: Bột Okonomiyaki, trứng gà, bắp cải, hành lá, thịt heo, rau củ thêm</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">80.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="main-product">
+                <h2 id="doankem">Đồ ăn kèm</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="main-product">
+                <h2 id="drink">Đồ uống</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./product-images/Takoyaki.png" alt="Tokayaki">
+                    </div>
+                    <div class="product-content">
+                        <h3>Takoyaki</h3>
+                        <p>Bao gồm: Bột takoyaki, trứng gà, bạch tuộc luộc, sốt tương, mayonnaise, rong biển sấy, cá bào</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">60.000đ</span>
+                        <button class="add-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Liên kết file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
