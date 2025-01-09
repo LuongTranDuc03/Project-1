@@ -64,10 +64,10 @@ function openModal() {
     document.getElementById('modal').style.display = 'flex';
   }
 
-  function closeModal() {
+function closeModal() {
     const usernameInput = document.getElementById("username");
     const passwordInput = document.getElementById("password");
     usernameInput.value = '';
     passwordInput.value = '';
     document.getElementById('modal').style.display =  'none';
-  }
+}
